@@ -6,6 +6,56 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
 ---
 
+## [0.5.1] - 2026-03-19
+
+### Adicionado
+
+#### Backend (API)
+- **Sistema de Impersonation**
+  - Migration `create_impersonation_sessions_table` para auditoria de sessões
+  - Model `ImpersonationSession` com relacionamentos e scopes
+  - Action `Admin/Impersonation/BuscarOrganizadores` - busca por empresa ou CNPJ
+  - Action `Admin/Impersonation/IniciarImpersonation` - cria token e sessão
+  - Action `Admin/Impersonation/EncerrarImpersonation` - revoga token e fecha sessão
+  - Resource `OrganizadorBuscaResource` para retorno da busca
+  - Controllers: `Buscar`, `Iniciar`, `Encerrar`
+  - Rotas: GET /admin/impersonation/buscar, POST /admin/impersonation/iniciar, POST /impersonation/encerrar
+
+- **Página Financeiro Admin**
+  - Action `Admin/ObterMetricasFinanceiras` - receita do mês, eventos pagos/pendentes
+  - Controller `Admin/Financeiro/Metricas`
+  - Rota: GET /admin/financeiro/metricas
+
+- **Correções**
+  - Controller `Evento/Visualizar` permite admin visualizar qualquer evento
+  - Action `BuscarOrganizadores` compatível com SQLite (LOWER ao invés de ILIKE)
+
+- **Testes**
+  - `BuscarOrganizadoresTest` - 9 cenários
+  - `IniciarImpersonationTest` - 8 cenários
+  - `EncerrarImpersonationTest` - 7 cenários
+  - `ObterMetricasFinanceirasTest`
+
+#### Frontend (Vue 3)
+- **Sistema de Impersonation**
+  - Type `OrganizadorBusca` em types/index.ts
+  - Store `auth` com state e actions para impersonation
+  - Componente `OrganizadorCombobox` - busca de organizadores no header
+  - Componente `ImpersonationBanner` - banner amarelo quando impersonando
+  - Header atualizado com combobox para admin
+  - AppLayout com banner de impersonation
+
+- **Página Financeiro**
+  - View `FinanceiroView` com cards de métricas e lista de eventos
+  - Rota `/admin/financeiro` com guard `requiresAdmin`
+  - Sidebar com menu admin (visível apenas para admin não impersonando)
+
+### Alterado
+- Guard `authGuard` - adicionada verificação de `requiresAdmin`
+- Sidebar oculta menu admin quando impersonando
+
+---
+
 ## [0.5.0] - 2026-03-19
 
 ### Adicionado
