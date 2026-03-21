@@ -2,7 +2,7 @@
 
 Este documento lista funcionalidades implementadas, em andamento e planejadas.
 
-**Última atualização:** 2026-03-19 (Sprint 06)
+**Última atualização:** 2026-03-21 (Sprint 06)
 **Mantido por:** Equipe de Desenvolvimento
 
 ---
@@ -1323,6 +1323,14 @@ Este documento lista funcionalidades implementadas, em andamento e planejadas.
 
 Funcionalidades para versões futuras:
 
+### Monetização e Serviços Financeiros
+
+- [ ] **Cotas de Patrocínio** - Módulo para organizadores criarem e gerenciarem cotas de patrocínio para seus eventos (bronze, prata, ouro, etc.), com benefícios configuráveis e controle de vendas
+- [ ] **Oferta de Seguro** - Integração com seguradoras para oferecer seguros aos organizadores (cancelamento de evento, responsabilidade civil) e expositores (danos a equipamentos, estandes)
+- [ ] **Oferta de Crédito** - Parceria com fintechs para oferecer linhas de crédito aos organizadores (antecipação de receitas, financiamento de estrutura) e expositores (capital de giro, investimento em estandes)
+
+### Funcionalidades Adicionais
+
 - [ ] Impressão de credenciais
 - [ ] Funcionamento offline
 - [ ] Backoffice admin (SIM/Code2)
@@ -1344,4 +1352,4 @@ Funcionalidades para versões futuras:
 
 ---
 
-**Última revisão:** 2026-03-19
+**Última revisão:** 2026-03-21
