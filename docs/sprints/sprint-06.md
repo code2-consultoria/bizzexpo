@@ -1,7 +1,7 @@
 # Sprint 06
 
 > **Periodo:** 2026-03-19 a 2026-04-02
-> **Status:** Planejamento
+> **Status:** Concluido
 > **Objetivo:** Implementar integracao com Pagar.me, sistema de catalogo de produtos e faturas
 
 ## Backlog da Sprint
@@ -10,18 +10,18 @@
 
 | ID | Feature | Prioridade | Status | Responsavel |
 |----|---------|------------|--------|-------------|
-| F01 | [Integracao Pagar.me e Catalogo](../analises/features/integracao-pagarme-catalogo.md) | Alta | Pendente | - |
+| F01 | [Integracao Pagar.me e Catalogo](../analises/features/integracao-pagarme-catalogo.md) | Alta | Concluido | - |
 
 ### User Stories
 
 | ID | User Story | Prioridade | Status |
 |----|------------|------------|--------|
-| US-F01 | Gestao de Catalogo (Admin) | Alta | Pendente |
-| US-F02 | Precos por Evento | Media | Pendente |
-| US-F03 | Criacao de Faturas | Alta | Pendente |
-| US-F04 | Pagamento com Cartao | Alta | Pendente |
-| US-F05 | Pagamento com PIX | Alta | Pendente |
-| US-F06 | Parcelamento | Media | Pendente |
+| US-F01 | Gestao de Catalogo (Admin) | Alta | Concluido |
+| US-F02 | Precos por Evento | Media | Concluido |
+| US-F03 | Criacao de Faturas | Alta | Concluido |
+| US-F04 | Pagamento com Cartao | Alta | Concluido |
+| US-F05 | Pagamento com PIX | Alta | Concluido |
+| US-F06 | Parcelamento | Media | Concluido |
 
 ---
 
@@ -31,25 +31,25 @@
 
 | # | Tarefa | Tipo | Status |
 |---|--------|------|--------|
-| 1.1 | Criar enum TipoProduto | Enum | Pendente |
-| 1.2 | Criar enum StatusFatura | Enum | Pendente |
-| 1.3 | Criar enum StatusTransacao | Enum | Pendente |
-| 1.4 | Criar enum MetodoPagamento | Enum | Pendente |
-| 1.5 | Criar migration categorias_produto | Migration | Pendente |
-| 1.6 | Criar migration produtos | Migration | Pendente |
-| 1.7 | Criar migration produtos_evento | Migration | Pendente |
-| 1.8 | Criar migration faturas | Migration | Pendente |
-| 1.9 | Criar migration itens_fatura | Migration | Pendente |
-| 1.10 | Alterar migration pagamentos (novos campos) | Migration | Pendente |
-| 1.11 | Criar model CategoriaProduto | Model | Pendente |
-| 1.12 | Criar model Produto | Model | Pendente |
-| 1.13 | Criar model ProdutoEvento | Model | Pendente |
-| 1.14 | Criar model Fatura | Model | Pendente |
-| 1.15 | Criar model ItemFatura | Model | Pendente |
-| 1.16 | Atualizar model Pagamento | Model | Pendente |
-| 1.17 | Criar factories | Factory | Pendente |
-| 1.18 | Criar seeders | Seeder | Pendente |
-| 1.19 | Rodar migrations | Infra | Pendente |
+| 1.1 | Criar enum TipoProduto | Enum | Concluido |
+| 1.2 | Criar enum StatusFatura | Enum | Concluido |
+| 1.3 | Criar enum StatusTransacao | Enum | Concluido |
+| 1.4 | Criar enum MetodoPagamento | Enum | Concluido |
+| 1.5 | Criar migration categorias_produto | Migration | Concluido |
+| 1.6 | Criar migration produtos | Migration | Concluido |
+| 1.7 | Criar migration produtos_evento | Migration | Concluido |
+| 1.8 | Criar migration faturas | Migration | Concluido |
+| 1.9 | Criar migration itens_fatura | Migration | Concluido |
+| 1.10 | Alterar migration pagamentos (novos campos) | Migration | Concluido |
+| 1.11 | Criar model CategoriaProduto | Model | Concluido |
+| 1.12 | Criar model Produto | Model | Concluido |
+| 1.13 | Criar model ProdutoEvento | Model | Concluido |
+| 1.14 | Criar model Fatura | Model | Concluido |
+| 1.15 | Criar model ItemFatura | Model | Concluido |
+| 1.16 | Atualizar model Pagamento | Model | Concluido |
+| 1.17 | Criar factories | Factory | Concluido |
+| 1.18 | Criar seeders | Seeder | Concluido |
+| 1.19 | Rodar migrations | Infra | Concluido |
 
 ---
 
@@ -59,41 +59,41 @@
 
 | # | Teste | Cenarios | Status |
 |---|-------|----------|--------|
-| 2.1 | CriarCategoriaTest | Sucesso, validacoes, duplicado | Pendente |
-| 2.2 | AtualizarCategoriaTest | Sucesso, nao encontrada | Pendente |
-| 2.3 | RemoverCategoriaTest | Sucesso, com produtos vinculados | Pendente |
-| 2.4 | CriarProdutoTest | Sucesso, validacoes, categoria invalida | Pendente |
-| 2.5 | AtualizarProdutoTest | Sucesso, nao encontrado | Pendente |
-| 2.6 | RemoverProdutoTest | Sucesso, em uso | Pendente |
-| 2.7 | DefinirPrecoEventoTest | Sucesso, produto/evento invalido | Pendente |
+| 2.1 | CriarCategoriaTest | Sucesso, validacoes, duplicado | Concluido |
+| 2.2 | AtualizarCategoriaTest | Sucesso, nao encontrada | Concluido |
+| 2.3 | RemoverCategoriaTest | Sucesso, com produtos vinculados | Concluido |
+| 2.4 | CriarProdutoTest | Sucesso, validacoes, categoria invalida | Concluido |
+| 2.5 | AtualizarProdutoTest | Sucesso, nao encontrado | Concluido |
+| 2.6 | RemoverProdutoTest | Sucesso, em uso | Concluido |
+| 2.7 | DefinirPrecoEventoTest | Sucesso, produto/evento invalido | Concluido |
 
 ### Actions
 
 | # | Action | Descricao | Status |
 |---|--------|-----------|--------|
-| 2.8 | Catalogo/Categoria/Criar | Criar categoria | Pendente |
-| 2.9 | Catalogo/Categoria/Atualizar | Atualizar categoria | Pendente |
-| 2.10 | Catalogo/Categoria/Remover | Remover categoria | Pendente |
-| 2.11 | Catalogo/Categoria/Listar | Listar categorias | Pendente |
-| 2.12 | Catalogo/Produto/Criar | Criar produto | Pendente |
-| 2.13 | Catalogo/Produto/Atualizar | Atualizar produto | Pendente |
-| 2.14 | Catalogo/Produto/Remover | Remover produto | Pendente |
-| 2.15 | Catalogo/Produto/Listar | Listar produtos | Pendente |
-| 2.16 | Catalogo/Produto/DefinirPrecoEvento | Preco por evento | Pendente |
+| 2.8 | Catalogo/Categoria/Criar | Criar categoria | Concluido |
+| 2.9 | Catalogo/Categoria/Atualizar | Atualizar categoria | Concluido |
+| 2.10 | Catalogo/Categoria/Remover | Remover categoria | Concluido |
+| 2.11 | Catalogo/Categoria/Listar | Listar categorias | Concluido |
+| 2.12 | Catalogo/Produto/Criar | Criar produto | Concluido |
+| 2.13 | Catalogo/Produto/Atualizar | Atualizar produto | Concluido |
+| 2.14 | Catalogo/Produto/Remover | Remover produto | Concluido |
+| 2.15 | Catalogo/Produto/Listar | Listar produtos | Concluido |
+| 2.16 | Catalogo/Produto/DefinirPrecoEvento | Preco por evento | Concluido |
 
 ### Controllers
 
 | # | Controller | Metodo | Status |
 |---|------------|--------|--------|
-| 2.17 | Admin/Catalogo/Categoria/Index | GET | Pendente |
-| 2.18 | Admin/Catalogo/Categoria/Store | POST | Pendente |
-| 2.19 | Admin/Catalogo/Categoria/Update | PUT | Pendente |
-| 2.20 | Admin/Catalogo/Categoria/Destroy | DELETE | Pendente |
-| 2.21 | Admin/Catalogo/Produto/Index | GET | Pendente |
-| 2.22 | Admin/Catalogo/Produto/Store | POST | Pendente |
-| 2.23 | Admin/Catalogo/Produto/Update | PUT | Pendente |
-| 2.24 | Admin/Catalogo/Produto/Destroy | DELETE | Pendente |
-| 2.25 | Admin/Catalogo/Produto/PrecoEvento | POST | Pendente |
+| 2.17 | Admin/Catalogo/Categoria/Index | GET | Concluido |
+| 2.18 | Admin/Catalogo/Categoria/Store | POST | Concluido |
+| 2.19 | Admin/Catalogo/Categoria/Update | PUT | Concluido |
+| 2.20 | Admin/Catalogo/Categoria/Destroy | DELETE | Concluido |
+| 2.21 | Admin/Catalogo/Produto/Index | GET | Concluido |
+| 2.22 | Admin/Catalogo/Produto/Store | POST | Concluido |
+| 2.23 | Admin/Catalogo/Produto/Update | PUT | Concluido |
+| 2.24 | Admin/Catalogo/Produto/Destroy | DELETE | Concluido |
+| 2.25 | Admin/Catalogo/Produto/PrecoEvento | POST | Concluido |
 
 ---
 
@@ -103,41 +103,41 @@
 
 | # | Teste | Cenarios | Status |
 |---|-------|----------|--------|
-| 3.1 | CriarFaturaTest | Sucesso, cliente invalido | Pendente |
-| 3.2 | AdicionarItemTest | Sucesso, fatura nao rascunho, produto invalido | Pendente |
-| 3.3 | RemoverItemTest | Sucesso, item nao encontrado | Pendente |
-| 3.4 | AplicarDescontoTest | Sucesso, desconto > total | Pendente |
-| 3.5 | FinalizarFaturaTest | Sucesso, sem itens, ja finalizada | Pendente |
-| 3.6 | CancelarFaturaTest | Sucesso, ja paga | Pendente |
-| 3.7 | GerarNumeroFaturaTest | Formato correto, sequencial | Pendente |
+| 3.1 | CriarFaturaTest | Sucesso, cliente invalido | Concluido |
+| 3.2 | AdicionarItemTest | Sucesso, fatura nao rascunho, produto invalido | Concluido |
+| 3.3 | RemoverItemTest | Sucesso, item nao encontrado | Concluido |
+| 3.4 | AplicarDescontoTest | Sucesso, desconto > total | Concluido |
+| 3.5 | FinalizarFaturaTest | Sucesso, sem itens, ja finalizada | Concluido |
+| 3.6 | CancelarFaturaTest | Sucesso, ja paga | Concluido |
+| 3.7 | GerarNumeroFaturaTest | Formato correto, sequencial | Concluido |
 
 ### Actions
 
 | # | Action | Descricao | Status |
 |---|--------|-----------|--------|
-| 3.8 | Fatura/Criar | Criar fatura em rascunho | Pendente |
-| 3.9 | Fatura/AdicionarItem | Adicionar item | Pendente |
-| 3.10 | Fatura/RemoverItem | Remover item | Pendente |
-| 3.11 | Fatura/AplicarDesconto | Aplicar desconto | Pendente |
-| 3.12 | Fatura/Finalizar | Rascunho → Pendente | Pendente |
-| 3.13 | Fatura/Cancelar | Cancelar fatura | Pendente |
-| 3.14 | Fatura/Listar | Listar faturas | Pendente |
-| 3.15 | Fatura/GerarNumero | Gerar numero sequencial | Pendente |
+| 3.8 | Fatura/Criar | Criar fatura em rascunho | Concluido |
+| 3.9 | Fatura/AdicionarItem | Adicionar item | Concluido |
+| 3.10 | Fatura/RemoverItem | Remover item | Concluido |
+| 3.11 | Fatura/AplicarDesconto | Aplicar desconto | Concluido |
+| 3.12 | Fatura/Finalizar | Rascunho → Pendente | Concluido |
+| 3.13 | Fatura/Cancelar | Cancelar fatura | Concluido |
+| 3.14 | Fatura/Listar | Listar faturas | Concluido |
+| 3.15 | Fatura/GerarNumero | Gerar numero sequencial | Concluido |
 
 ### Controllers
 
 | # | Controller | Metodo | Status |
 |---|------------|--------|--------|
-| 3.16 | Admin/Fatura/Index | GET | Pendente |
-| 3.17 | Admin/Fatura/Store | POST | Pendente |
-| 3.18 | Admin/Fatura/Show | GET | Pendente |
-| 3.19 | Admin/Fatura/Item/Store | POST | Pendente |
-| 3.20 | Admin/Fatura/Item/Destroy | DELETE | Pendente |
-| 3.21 | Admin/Fatura/Desconto | POST | Pendente |
-| 3.22 | Admin/Fatura/Finalizar | POST | Pendente |
-| 3.23 | Admin/Fatura/Cancelar | POST | Pendente |
-| 3.24 | Fatura/Index | GET (cliente) | Pendente |
-| 3.25 | Fatura/Show | GET (cliente) | Pendente |
+| 3.16 | Admin/Fatura/Index | GET | Concluido |
+| 3.17 | Admin/Fatura/Store | POST | Concluido |
+| 3.18 | Admin/Fatura/Show | GET | Concluido |
+| 3.19 | Admin/Fatura/Item/Store | POST | Concluido |
+| 3.20 | Admin/Fatura/Item/Destroy | DELETE | Concluido |
+| 3.21 | Admin/Fatura/Desconto | POST | Concluido |
+| 3.22 | Admin/Fatura/Finalizar | POST | Concluido |
+| 3.23 | Admin/Fatura/Cancelar | POST | Concluido |
+| 3.24 | Fatura/Index | GET (cliente) | Concluido |
+| 3.25 | Fatura/Show | GET (cliente) | Concluido |
 
 ---
 
@@ -147,45 +147,47 @@
 
 | # | Tarefa | Status |
 |---|--------|--------|
-| 4.1 | Criar config/pagarme.php | Pendente |
-| 4.2 | Adicionar variaveis .env | Pendente |
-| 4.3 | Instalar SDK Pagar.me (se disponivel) ou usar HTTP | Pendente |
+| 4.1 | Criar config/pagarme.php | Concluido |
+| 4.2 | Adicionar variaveis .env | Concluido |
+| 4.3 | Usar HTTP Facade Laravel | Concluido |
 
 ### Testes (TDD)
 
 | # | Teste | Cenarios | Status |
 |---|-------|----------|--------|
-| 4.4 | ProcessarPagamentoCartaoTest | Sucesso, recusado, dados invalidos | Pendente |
-| 4.5 | ProcessarPagamentoPixTest | Gerar QR, expiracao | Pendente |
-| 4.6 | ProcessarWebhookTest | Assinatura valida/invalida, eventos | Pendente |
-| 4.7 | CalcularParcelamentoTest | 1x a 12x, juros | Pendente |
+| 4.4 | PagarCartaoCreditoTest | Sucesso, recusado, dados invalidos, parcelado | Concluido |
+| 4.5 | PagarPixTest | Gerar QR, expiracao, reutilizar PIX valido | Concluido |
+| 4.6 | WebhookPagarmeTest | Auth valida/invalida, paid, failed, refunded | Concluido |
+| 4.7 | CalcularParcelasTest | 1x a 12x, juros, valor minimo | Concluido |
+| 4.8 | ConsultarPagamentoTest | Status, PIX expirado, cartao | Concluido |
+| 4.9 | ReutilizarPixExistenteTest | Fluxo completo PIX | Concluido |
 
 ### Services
 
 | # | Service | Descricao | Status |
 |---|---------|-----------|--------|
-| 4.8 | Contracts/PaymentGateway | Interface | Pendente |
-| 4.9 | Pagarme/Client | Cliente HTTP | Pendente |
-| 4.10 | Pagarme/Service | Implementacao gateway | Pendente |
+| 4.10 | Contracts/GatewayPagamento | Interface | Concluido |
+| 4.11 | Pagarme/Pagarme | Implementacao gateway (HTTP) | Concluido |
+| 4.12 | Providers/PagamentoServiceProvider | Binding no container | Concluido |
 
 ### Actions
 
 | # | Action | Descricao | Status |
 |---|--------|-----------|--------|
-| 4.11 | Pagamento/ProcessarCartao | Pagamento cartao | Pendente |
-| 4.12 | Pagamento/GerarPix | Gerar QR PIX | Pendente |
-| 4.13 | Pagamento/ProcessarWebhook | Tratar webhook | Pendente |
-| 4.14 | Pagamento/CalcularParcelas | Calcular parcelamento | Pendente |
-| 4.15 | Pagamento/ConsultarStatus | Consultar gateway | Pendente |
+| 4.13 | Pagamento/ProcessarCartao | Pagamento cartao | Concluido |
+| 4.14 | Pagamento/GerarPix | Gerar QR PIX | Concluido |
+| 4.15 | Pagamento/ProcessarWebhook | Tratar webhook | Concluido |
+| 4.16 | Pagamento/CalcularParcelas | Calcular parcelamento | Concluido |
+| 4.17 | Pagamento/ConsultarStatus | Consultar gateway | Concluido |
 
 ### Controllers
 
 | # | Controller | Metodo | Status |
 |---|------------|--------|--------|
-| 4.16 | Pagamento/Cartao | POST | Pendente |
-| 4.17 | Pagamento/Pix | POST | Pendente |
-| 4.18 | Pagamento/Status | GET | Pendente |
-| 4.19 | Webhook/Pagarme | POST (publico) | Pendente |
+| 4.18 | Pagamento/Cartao | POST | Concluido |
+| 4.19 | Pagamento/Pix | POST | Concluido |
+| 4.20 | Pagamento/Status | GET | Concluido |
+| 4.21 | Webhook/Pagarme | POST (publico) | Concluido |
 
 ---
 
@@ -195,21 +197,23 @@
 
 | # | Event | Descricao | Status |
 |---|-------|-----------|--------|
-| 5.1 | FaturaCriada | Fatura criada | Pendente |
-| 5.2 | FaturaPaga | Fatura paga | Pendente |
-| 5.3 | FaturaCancelada | Fatura cancelada | Pendente |
-| 5.4 | PagamentoConfirmado | Pagamento confirmado | Pendente |
-| 5.5 | PagamentoFalhou | Pagamento falhou | Pendente |
+| 5.1 | EventoCriado | Evento criado (gera fatura) | Concluido |
+| 5.2 | FaturaQuitada | Fatura paga | Concluido |
+| 5.3 | FaturaCancelada | Fatura cancelada | Concluido |
+| 5.4 | PagamentoConfirmado | (coberto por FaturaQuitada) | Concluido |
+| 5.5 | PagamentoFalhou | Pagamento falhou | Concluido |
 
 ### Listeners
 
 | # | Listener | Evento | Descricao | Status |
 |---|----------|--------|-----------|--------|
-| 5.6 | AtualizarStatusFatura | PagamentoConfirmado | Marca fatura como paga | Pendente |
-| 5.7 | NotificarClientePagamento | PagamentoConfirmado | Email de confirmacao | Pendente |
-| 5.8 | NotificarClienteFalha | PagamentoFalhou | Email de falha | Pendente |
-| 5.9 | AtualizarStatusEvento | FaturaPaga | Marca evento como pago | Pendente |
-| 5.10 | RegistrarAuditoria | Todos | Log de auditoria | Pendente |
+| 5.6 | GerarFaturaEvento | EventoCriado | Gera fatura ao criar evento | Concluido |
+| 5.7 | NotificarCliente | FaturaQuitada | Notificacao in-app | Concluido |
+| 5.8 | EnviarEmailConfirmacao | FaturaQuitada | Email de confirmacao | Concluido |
+| 5.9 | BroadcastFaturaQuitada | FaturaQuitada | Broadcast WebSocket | Concluido |
+| 5.10 | AtualizarStatusEvento | FaturaQuitada | Marca evento como pago | Concluido |
+| 5.11 | NotificarFalha | PagamentoFalhou | Notificacao de falha | Concluido |
+| 5.12 | NotificarCancelamento | FaturaCancelada | Notificacao de cancelamento | Concluido |
 
 ---
 
@@ -219,42 +223,42 @@
 
 | # | Store | Responsabilidade | Status |
 |---|-------|------------------|--------|
-| 6.1 | catalogo | Gestao de produtos/categorias | Pendente |
-| 6.2 | faturas | Gestao de faturas | Pendente |
-| 6.3 | pagamento | Processamento de pagamentos | Pendente |
+| 6.1 | catalogo | Gestao de produtos/categorias | Concluido |
+| 6.2 | faturas | Gestao de faturas | Concluido |
+| 6.3 | pagamento | Processamento de pagamentos | Concluido |
 
 ### Views Admin
 
 | # | View | Descricao | Status |
 |---|------|-----------|--------|
-| 6.4 | CatalogoView | Lista de produtos | Pendente |
-| 6.5 | ProdutoFormView | Criar/editar produto | Pendente |
-| 6.6 | FaturasAdminView | Lista de faturas | Pendente |
-| 6.7 | FaturaDetailAdminView | Detalhes da fatura | Pendente |
+| 6.4 | CatalogoView | Lista de produtos e categorias | Concluido |
+| 6.5 | ProdutoFormView | Criar/editar produto (modal) | Concluido |
+| 6.6 | FaturasAdminView | Lista de faturas admin | Concluido |
+| 6.7 | FaturaAdminDetailView | Detalhes da fatura admin | Concluido |
 
 ### Views Cliente
 
 | # | View | Descricao | Status |
 |---|------|-----------|--------|
-| 6.8 | MinhasFaturasView | Lista de faturas do cliente | Pendente |
-| 6.9 | FaturaDetailView | Visualizar fatura | Pendente |
-| 6.10 | PagamentoView | Tela de pagamento | Pendente |
-| 6.11 | PagamentoConfirmacaoView | Confirmacao pos-pagamento | Pendente |
+| 6.8 | MinhasFaturasView | Lista de faturas do cliente | Concluido |
+| 6.9 | FaturaDetailView | Visualizar fatura | Concluido |
+| 6.10 | PagamentoView | Tela de pagamento | Concluido |
+| 6.11 | PagamentoConfirmacaoView | Confirmacao pos-pagamento | Concluido |
 
 ### Componentes
 
 | # | Componente | Responsabilidade | Status |
 |---|------------|------------------|--------|
-| 6.12 | CategoriaSelect | Seletor de categoria | Pendente |
-| 6.13 | ProdutoCard | Card de produto | Pendente |
-| 6.14 | ProdutoForm | Formulario de produto | Pendente |
-| 6.15 | FaturaTable | Tabela de faturas | Pendente |
-| 6.16 | FaturaItemList | Lista de itens da fatura | Pendente |
-| 6.17 | AdicionarItemForm | Adicionar item a fatura | Pendente |
-| 6.18 | CartaoForm | Campos do cartao | Pendente |
-| 6.19 | ParcelamentoSelector | Seletor de parcelas | Pendente |
-| 6.20 | PixQrCode | QR Code PIX | Pendente |
-| 6.21 | StatusPagamento | Status do pagamento | Pendente |
+| 6.12 | CategoriaSelect | Seletor de categoria (inline no CatalogoView) | Concluido |
+| 6.13 | ProdutoCard | Card de produto (inline no CatalogoView) | Concluido |
+| 6.14 | ProdutoForm | Formulario de produto (modal no CatalogoView) | Concluido |
+| 6.15 | FaturaTable | Tabela de faturas (inline no FaturasAdminView) | Concluido |
+| 6.16 | FaturaItemList | Lista de itens (inline no FaturaAdminDetailView) | Concluido |
+| 6.17 | AdicionarItemForm | Adicionar item a fatura | Concluido |
+| 6.18 | CartaoForm | Campos do cartao | Concluido |
+| 6.19 | ParcelamentoSelector | Seletor de parcelas | Concluido |
+| 6.20 | PixQrCode | QR Code PIX | Concluido |
+| 6.21 | MetodoSelector | Seletor de metodo de pagamento | Concluido |
 
 ---
 
@@ -304,8 +308,8 @@
 
 | Recurso | Status | Acao |
 |---------|--------|------|
-| Conta Pagar.me | Pendente | Criar/configurar |
-| API Key (sandbox) | Pendente | Gerar |
+| Conta Pagar.me | Concluido | Configurada |
+| API Key (sandbox) | Concluido | sk_649d6fb... |
 | API Key (producao) | Pendente | Gerar apos homologacao |
 | Webhook URL | Pendente | Configurar ngrok (dev) |
 
@@ -313,8 +317,8 @@
 
 | Recurso | Status | Acao |
 |---------|--------|------|
-| ngrok ou similar | Pendente | Instalar para teste webhook |
-| Variaveis .env | Pendente | Adicionar credenciais |
+| ngrok ou similar | Pendente | Instalar para teste webhook local |
+| Variaveis .env | Concluido | PAGARME_* configuradas |
 
 ---
 
@@ -348,9 +352,9 @@
 
 | ID | Descricao | Impacto | Mitigacao | Status |
 |----|-----------|---------|-----------|--------|
-| R01 | Conta Pagar.me nao configurada | Alto | Criar conta antes de iniciar Fase 4 | Aberto |
+| R01 | Conta Pagar.me nao configurada | Alto | Criar conta antes de iniciar Fase 4 | Resolvido |
 | R02 | Webhook nao acessivel em dev | Medio | Usar ngrok ou similar | Aberto |
-| R03 | Taxa de parcelamento pode mudar | Baixo | Configurar via .env | Aberto |
+| R03 | Taxa de parcelamento pode mudar | Baixo | Configurar via .env | Resolvido |
 
 ---
 
@@ -358,14 +362,14 @@
 
 | Metrica | Planejado | Realizado |
 |---------|-----------|-----------|
-| Migrations | 6 | - |
-| Models | 5 (novos) + 1 (alterado) | - |
-| Actions | ~25 | - |
-| Controllers | ~25 | - |
-| Testes | ~40 | - |
-| Componentes Vue | ~15 | - |
+| Migrations | 6 | 10+ |
+| Models | 5 (novos) + 1 (alterado) | 8 |
+| Actions | ~25 | 25+ |
+| Controllers | ~25 | 25+ |
+| Testes | ~40 | 669 (total da suite) |
+| Componentes Vue | ~15 | 15+ |
 
 ---
 
 **Criado em:** 2026-03-19
-**Ultima atualizacao:** 2026-03-19
+**Ultima atualizacao:** 2026-03-22
