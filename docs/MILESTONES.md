@@ -15,7 +15,8 @@ Marcos do projeto que agrupam funcionalidades relacionadas.
 | M2 | Fluxo Completo MVP | Concluido | Sprint 03 | v0.3.0 |
 | M3 | SEO e Multi-tenancy | Em Andamento | Sprint 04 | v0.4.0 |
 | M3.5 | Sistema Administrativo | Concluido | Sprint 05 | v0.5.0 |
-| M4 | Pagamento e Catalogo | Em Andamento | Sprint 06 | v0.6.0 |
+| M4 | Pagamento e Catalogo | Concluido | Sprint 06 | v0.6.0 |
+| M5 | Gestao Organizador | Em Andamento | Sprint 07 | v0.7.0 |
 
 ---
 
@@ -137,9 +138,9 @@ Marcos do projeto que agrupam funcionalidades relacionadas.
 
 ## M4 - Pagamento e Catalogo
 
-**Status:** Em Andamento
-**Versao:** v0.6.0 (planejada)
-**Tag Git:** `docs-v0.6.0` (a criar)
+**Status:** Concluido
+**Versao:** v0.6.0
+**Tag Git:** `docs-v0.6.0`
 
 ### Escopo
 - Integracao com Pagar.me (cartao, debito, PIX)
@@ -148,14 +149,14 @@ Marcos do projeto que agrupam funcionalidades relacionadas.
 - Parcelamento com juros
 
 ### Funcionalidades
-- [ ] US-7.1: Gestao de Catalogo (Admin)
-- [ ] US-7.2: Precos por Evento
-- [ ] US-7.3: Sistema de Faturas
-- [ ] US-7.4: Pagamento com Cartao
-- [ ] US-7.5: Pagamento com PIX
-- [ ] US-7.6: Webhook Pagar.me
-- [ ] US-7.7: Parcelamento
-- [ ] US-7.8: Visualizar Minhas Faturas
+- [x] US-7.1: Gestao de Catalogo (Admin)
+- [x] US-7.2: Precos por Evento
+- [x] US-7.3: Sistema de Faturas
+- [x] US-7.4: Pagamento com Cartao
+- [x] US-7.5: Pagamento com PIX
+- [x] US-7.6: Webhook Pagar.me
+- [x] US-7.7: Parcelamento
+- [x] US-7.8: Visualizar Minhas Faturas
 
 ### Artefatos
 - Sprint: `docs/sprints/sprint-06.md`
@@ -163,11 +164,30 @@ Marcos do projeto que agrupam funcionalidades relacionadas.
 
 ---
 
+## M5 - Gestao Organizador
+
+**Status:** Em Andamento
+**Versao:** v0.7.0 (planejada)
+**Tag Git:** `docs-v0.7.0` (a criar)
+
+### Escopo
+- Edicao de perfil do organizador
+- Alteracao de senha
+- Configuracoes de conta
+
+### Funcionalidades
+- [ ] US-9.1: Editar Perfil do Organizador
+- [ ] US-9.2: Alterar Senha
+
+### Artefatos
+- Sprint: `docs/sprints/sprint-07.md`
+
+---
+
 ## Proximos Milestones (Planejados)
 
 | ID | Nome | Escopo Principal |
 |----|------|------------------|
-| M5 | Gestao Organizador | Perfil, senha, configuracoes |
 | M6 | OAuth2 | Login com Google/LinkedIn |
 | M7 | Customizacao Visual | Temas e personalizacao |
 
@@ -191,4 +211,4 @@ Marcos do projeto que agrupam funcionalidades relacionadas.
 
 ---
 
-**Ultima atualizacao:** 2026-03-19
+**Ultima atualizacao:** 2026-03-22

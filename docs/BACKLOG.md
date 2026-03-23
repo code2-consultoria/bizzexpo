@@ -2,7 +2,7 @@
 
 Este documento lista funcionalidades implementadas, em andamento e planejadas.
 
-**Última atualização:** 2026-03-21 (Sprint 06)
+**Última atualização:** 2026-03-22 (Sprint 07)
 **Mantido por:** Equipe de Desenvolvimento
 
 ---
@@ -19,9 +19,9 @@ Este documento lista funcionalidades implementadas, em andamento e planejadas.
 | 4 | Sistema de Inscrição | Concluído | 03 |
 | 5 | Dashboard Analítico | Concluído | 03 |
 | 6 | Landing Page Evento | Em Andamento | 04 |
-| 7 | Pagamento | Em Andamento | 06 |
+| 7 | Pagamento | Concluido | 06 |
 | 8 | Check-in | Concluído | 03-04 (validação) |
-| 9 | Gestão de Organizador | Pendente | - |
+| 9 | Gestão de Organizador | Em Andamento | 07 |
 | 10 | Gestão de Staff | Concluído | 02 |
 | 11 | Captura de Leads | Concluído | 03 |
 | 12 | Customização Visual | Pendente | - |
@@ -1352,4 +1352,4 @@ Funcionalidades para versões futuras:
 
 ---
 
-**Última revisão:** 2026-03-21
+**Última revisão:** 2026-03-22
