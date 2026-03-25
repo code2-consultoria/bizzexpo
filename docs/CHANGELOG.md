@@ -6,6 +6,31 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
 ---
 
+## [0.6.1] - 2026-03-25
+
+### Adicionado
+
+#### Backend (API)
+- **Pacote resend/resend-laravel** para envio de emails via Resend
+- **Migration auditable_id** - Altera coluna de UUID para string(36) para suportar models com ID inteiro
+- **Testes InscricaoTest** - 5 cenarios (inscricao publica, listagem, duplicata, evento nao publicado, isolamento)
+
+#### Frontend (Vue 3)
+- **Toast feedback** em inscricao e walk-in para erros de servidor/rede
+- **Variaveis CSS Material Design 3**:
+  - `--color-surface-container-*` (lowest, low, default, high, highest)
+  - `--color-on-surface`, `--color-on-surface-variant`
+  - Cores de estado: error, success, warning, info
+- **Testes E2E Playwright** - 10 cenarios para inscricao, walk-in e listagem
+
+### Corrigido
+- **Erro 500 na inscricao** - Pacote Resend faltava em producao
+- **Modais transparentes** - CSS variables do Material Design 3 faltando
+- **Falta de feedback visual** - Adicionado Toast apos inscricao/walk-in com erro
+- **Factories com fake()** - Substituido por `$this->faker` (compatibilidade)
+
+---
+
 ## [0.6.0] - 2026-03-19 (Em Andamento)
 
 ### Adicionado
