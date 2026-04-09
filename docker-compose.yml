@@ -24,10 +24,20 @@ services:
       - QUEUE_CONNECTION=redis
       - CACHE_STORE=redis
       - SESSION_DRIVER=redis
+      - AWS_ACCESS_KEY_ID=rustfsadmin
+      - AWS_SECRET_ACCESS_KEY=rustfsadmin
+      - AWS_DEFAULT_REGION=us-east-1
+      - AWS_BUCKET=bizzexpo
+      - AWS_URL=http://rustfs:9000/bizzexpo
+      - AWS_ENDPOINT=http://rustfs:9000
+      - AWS_USE_PATH_STYLE_ENDPOINT=true
+      - FILESYSTEM_DISK=s3
     depends_on:
       postgres:
         condition: service_healthy
       redis:
+        condition: service_healthy
+      rustfs:
         condition: service_healthy
     networks:
       - bizzexpo-network
@@ -55,6 +65,14 @@ services:
       - REDIS_PORT=6379
       - QUEUE_CONNECTION=redis
       - CACHE_STORE=redis
+      - AWS_ACCESS_KEY_ID=rustfsadmin
+      - AWS_SECRET_ACCESS_KEY=rustfsadmin
+      - AWS_DEFAULT_REGION=us-east-1
+      - AWS_BUCKET=bizzexpo
+      - AWS_URL=http://rustfs:9000/bizzexpo
+      - AWS_ENDPOINT=http://rustfs:9000
+      - AWS_USE_PATH_STYLE_ENDPOINT=true
+      - FILESYSTEM_DISK=s3
     depends_on:
       - api
     networks:
@@ -81,6 +99,14 @@ services:
       - DB_PASSWORD=bizzexpo
       - REDIS_HOST=redis
       - REDIS_PORT=6379
+      - AWS_ACCESS_KEY_ID=rustfsadmin
+      - AWS_SECRET_ACCESS_KEY=rustfsadmin
+      - AWS_DEFAULT_REGION=us-east-1
+      - AWS_BUCKET=bizzexpo
+      - AWS_URL=http://rustfs:9000/bizzexpo
+      - AWS_ENDPOINT=http://rustfs:9000
+      - AWS_USE_PATH_STYLE_ENDPOINT=true
+      - FILESYSTEM_DISK=s3
     depends_on:
       - api
     networks:
@@ -143,6 +169,21 @@ services:
       - bizzexpo-network
       - proxymng
 
+  rustfs:
+    image: rustfs/rustfs:latest
+    container_name: bizzexpo-rustfs
+    user: "10001:10001"
+    volumes:
+      - rustfs_data:/data
+      - rustfs_logs:/logs
+    networks:
+      - bizzexpo-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 20s
+      retries: 3
+
 networks:
   bizzexpo-network:
     driver: bridge
@@ -153,3 +194,5 @@ volumes:
   postgres_data:
   redis_data:
   front_node_modules:
+  rustfs_data:
+  rustfs_logs:
