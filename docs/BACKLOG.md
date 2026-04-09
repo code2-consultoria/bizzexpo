@@ -2,7 +2,7 @@
 
 Este documento lista funcionalidades implementadas, em andamento e planejadas.
 
-**Ultima atualizacao:** 2026-04-08 (Sprint 07 - Refatoracao Pessoa/Expositor/Patrocinador)
+**Ultima atualizacao:** 2026-04-08 (Sprint 07 - Refatoracao Pessoa/Expositor/Patrocinador - CONCLUIDA)
 **Mantido por:** Equipe de Desenvolvimento
 
 ---
@@ -1019,10 +1019,12 @@ Este documento lista funcionalidades implementadas, em andamento e planejadas.
 **Criterios de aceite:**
 - [x] Criar Pessoa PF com CPF
 - [x] Criar Pessoa PJ com CNPJ
+- [x] Atualizar dados da Pessoa (nome, endereco, nome fantasia)
 - [x] Buscar Pessoa por documento (escopo do organizador)
 - [x] Contato EMAIL criado automaticamente via evento PessoaCriada
 - [x] Multiplos contatos por pessoa (email, telefone, celular, WhatsApp)
 - [x] Metodos obterEmailPrincipal(), obterTelefonePrincipal(), obterWhatsapp()
+- [x] Controllers e Rotas para API
 - [x] Testes automatizados
 
 **Arquivos criados:**
@@ -1033,12 +1035,18 @@ Este documento lista funcionalidades implementadas, em andamento e planejadas.
 - `app/Events/PessoaCriada.php`
 - `app/Listeners/Pessoa/CriarContatoPrincipal.php`
 - `app/Actions/Pessoa/Criar.php`
+- `app/Actions/Pessoa/Atualizar.php`
 - `app/Actions/Pessoa/BuscarPorDocumento.php`
+- `app/Http/Controllers/Pessoa/Buscar.php`
+- `app/Http/Requests/Pessoa/BuscarRequest.php`
+- `app/Http/Resources/PessoaResource.php`
+- `app/Http/Resources/ContatoResource.php`
 - `database/factories/PessoaFactory.php`
 - `database/factories/ContatoFactory.php`
-- `tests/Feature/Actions/Pessoa/CriarPessoaTest.php`
-- `tests/Feature/Actions/Pessoa/BuscarPorDocumentoTest.php`
-- `tests/Feature/Models/ContatoTest.php`
+- `tests/Feature/Pessoa/CriarPessoaTest.php`
+- `tests/Feature/Pessoa/AtualizarPessoaTest.php`
+- `tests/Feature/Pessoa/BuscarPorDocumentoTest.php`
+- `tests/Feature/Pessoa/ContatoTest.php`
 
 ---
 
@@ -1053,6 +1061,7 @@ Este documento lista funcionalidades implementadas, em andamento e planejadas.
 - [x] Campos: nome, descricao, localizacao, dimensoes, preco
 - [x] Validar espaco disponivel antes de vincular expositor
 - [x] Migracao de dados: stands e espacos_ativacao -> espacos_comerciais
+- [x] Controllers e Rotas para API
 - [x] Testes automatizados
 
 **Arquivos criados:**
@@ -1062,11 +1071,20 @@ Este documento lista funcionalidades implementadas, em andamento e planejadas.
 - `app/Actions/EspacoComercial/Listar.php`
 - `app/Actions/EspacoComercial/Atualizar.php`
 - `app/Actions/EspacoComercial/Excluir.php`
+- `app/Http/Controllers/EspacoComercial/Criar.php`
+- `app/Http/Controllers/EspacoComercial/Listar.php`
+- `app/Http/Controllers/EspacoComercial/Visualizar.php`
+- `app/Http/Controllers/EspacoComercial/Atualizar.php`
+- `app/Http/Controllers/EspacoComercial/Excluir.php`
+- `app/Http/Requests/EspacoComercial/CriarRequest.php`
+- `app/Http/Requests/EspacoComercial/AtualizarRequest.php`
+- `app/Http/Resources/EspacoComercialResource.php`
+- `app/Http/Resources/EspacoComercialCollection.php`
 - `database/factories/EspacoComercialFactory.php`
-- `tests/Feature/Actions/EspacoComercial/CriarEspacoComercialTest.php`
-- `tests/Feature/Actions/EspacoComercial/ListarEspacosComerciaisTest.php`
-- `tests/Feature/Actions/EspacoComercial/AtualizarEspacoComercialTest.php`
-- `tests/Feature/Actions/EspacoComercial/ExcluirEspacoComercialTest.php`
+- `tests/Feature/EspacoComercial/CriarEspacoComercialTest.php`
+- `tests/Feature/EspacoComercial/ListarEspacosComerciaisTest.php`
+- `tests/Feature/EspacoComercial/AtualizarEspacoComercialTest.php`
+- `tests/Feature/EspacoComercial/ExcluirEspacoComercialTest.php`
 
 ---
 
@@ -1105,17 +1123,25 @@ Este documento lista funcionalidades implementadas, em andamento e planejadas.
 - [x] Validar pessoa ja nao e patrocinador do evento
 - [x] Evento PatrocinadorCadastrado dispara geracao de fatura e envio de email
 - [x] CotaPatrocinio com metodos atingiuLimite() e vagas_disponiveis
+- [x] Controllers e Rotas para API
 - [x] Testes automatizados
 
 **Arquivos criados:**
 - `app/Models/Patrocinador.php`
 - `app/Actions/Patrocinador/Cadastrar.php`
 - `app/Actions/Patrocinador/Listar.php`
+- `app/Http/Controllers/Patrocinador/Cadastrar.php`
+- `app/Http/Controllers/Patrocinador/Listar.php`
+- `app/Http/Controllers/Patrocinador/Visualizar.php`
+- `app/Http/Requests/Patrocinador/CadastrarRequest.php`
+- `app/Http/Resources/PatrocinadorResource.php`
+- `app/Http/Resources/PatrocinadorCollection.php`
 - `app/Events/PatrocinadorCadastrado.php`
 - `app/Listeners/Patrocinador/GerarFaturaPatrocinador.php`
 - `app/Listeners/Patrocinador/EnviarEmailPatrocinador.php`
 - `database/factories/PatrocinadorFactory.php`
-- `tests/Feature/Actions/Patrocinador/CadastrarPatrocinadorTest.php`
+- `database/factories/CotaPatrocinioFactory.php`
+- `tests/Feature/Patrocinador/CadastrarPatrocinadorTest.php`
 
 ---
 
@@ -1484,4 +1510,4 @@ Funcionalidades para versões futuras:
 
 ---
 
-**Ultima revisao:** 2026-04-08
+**Ultima revisao:** 2026-04-08 (Sprints 1-5 da refatoracao concluidas)

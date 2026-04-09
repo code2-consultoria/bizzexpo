@@ -29,9 +29,25 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
 - **Actions**
   - `Pessoa/Criar` - Cria pessoa com documento
+  - `Pessoa/Atualizar` - Atualiza dados da pessoa
   - `Pessoa/BuscarPorDocumento` - Busca no escopo do organizador
   - `EspacoComercial/Criar`, `Listar`, `Atualizar`, `Excluir`
   - `Patrocinador/Cadastrar`, `Listar`
+
+- **Controllers e Rotas**
+  - `Pessoa/Buscar` - GET /pessoas/buscar
+  - `EspacoComercial/Criar`, `Listar`, `Visualizar`, `Atualizar`, `Excluir`
+  - `Patrocinador/Cadastrar`, `Listar`, `Visualizar`
+
+- **Resources**
+  - `PessoaResource`, `ContatoResource`
+  - `EspacoComercialResource`, `EspacoComercialCollection`
+  - `PatrocinadorResource`, `PatrocinadorCollection`
+
+- **Requests**
+  - `Pessoa/BuscarRequest`
+  - `EspacoComercial/CriarRequest`, `AtualizarRequest`
+  - `Patrocinador/CadastrarRequest`
 
 - **Migrations**
   - 12 migrations para criacao de tabelas, migracao de dados e limpeza
@@ -39,13 +55,14 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
   - Preparacao para remocao de colunas legadas (comentadas)
 
 - **Testes**
-  - `CriarPessoaTest`, `BuscarPorDocumentoTest`, `ContatoTest`
+  - `CriarPessoaTest`, `AtualizarPessoaTest`, `BuscarPorDocumentoTest`, `ContatoTest`
   - `CriarEspacoComercialTest`, `ListarEspacosComerciaisTest`, `AtualizarEspacoComercialTest`, `ExcluirEspacoComercialTest`
   - `CriarExpositorRefatoradoTest`
   - `CadastrarPatrocinadorTest`
+  - Total: 941 testes passando
 
 - **Factories**
-  - `PessoaFactory`, `ContatoFactory`, `EspacoComercialFactory`, `PatrocinadorFactory`
+  - `PessoaFactory`, `ContatoFactory`, `EspacoComercialFactory`, `PatrocinadorFactory`, `CotaPatrocinioFactory`
 
 ### Alterado
 - **Model User** - Adicionado `hasOne Pessoa`
@@ -56,10 +73,12 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 - **Model CotaPatrocinio** - Adicionado `hasMany Patrocinador`, metodos `atingiuLimite()`, accessor `vagas_disponiveis`
 - **Action CriarExpositor** - Refatorada para usar Pessoa + EspacoComercial, dispara ExpositorCadastrado
 - **EventServiceProvider** - Registrados novos eventos (PessoaCriada, ExpositorCadastrado, PatrocinadorCadastrado)
+- **ExpositorResource** - Atualizado para incluir Pessoa e EspacoComercial
 
 ### Documentacao
 - Atualizado modelo de dados com novas entidades
 - Atualizado backlog com features de gestao do organizador
+- Sprints 1-5 da refatoracao concluidas
 
 ---
 
