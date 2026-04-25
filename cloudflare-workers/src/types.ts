@@ -18,6 +18,7 @@ export interface Evento {
   local: string;
   logo?: string;
   banner?: string;
+  og_image?: string;
   status: string;
 }
 

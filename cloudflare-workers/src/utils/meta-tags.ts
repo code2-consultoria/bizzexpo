@@ -16,7 +16,8 @@ const DEFAULT_DESCRIPTION = 'duevento.com.br - Gestão de eventos e feiras';
 export function generateMetaTags(evento: Evento, url: string): string {
   const title = evento.nome;
   const description = DEFAULT_DESCRIPTION;
-  const image = DEFAULT_OG_IMAGE;
+  // Prioridade: og_image > banner > DEFAULT_OG_IMAGE
+  const image = evento.og_image || evento.banner || DEFAULT_OG_IMAGE;
   const siteName = 'Duevento';
 
   return `
@@ -89,7 +90,7 @@ function generateJsonLd(evento: Evento, url: string): string {
       '@type': 'Place',
       name: evento.local,
     },
-    image: evento.banner || DEFAULT_OG_IMAGE,
+    image: evento.og_image || evento.banner || DEFAULT_OG_IMAGE,
     url: url,
     organizer: {
       '@type': 'Organization',
