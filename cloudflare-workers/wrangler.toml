@@ -1,0 +1,28 @@
+# Cloudflare Worker - Duevento SEO
+name = "duevento-seo"
+main = "src/index.ts"
+compatibility_date = "2024-12-01"
+
+# Ambiente de desenvolvimento
+[env.development]
+vars = { API_BASE_URL = "https://bizzexpo-api.code2.dev", FRONTEND_URL = "https://bizzexpo.code2.dev" }
+
+# Ambiente de staging
+[env.staging]
+vars = { API_BASE_URL = "https://api-staging.duevento.com.br", FRONTEND_URL = "https://staging.duevento.com.br" }
+routes = [
+  { pattern = "staging.duevento.com.br/evento/*", zone_name = "duevento.com.br" }
+]
+
+# Ambiente de produção
+[env.production]
+vars = { API_BASE_URL = "https://api.duevento.com.br", FRONTEND_URL = "https://duevento.com.br" }
+routes = [
+  { pattern = "duevento.com.br/evento/*", zone_name = "duevento.com.br" },
+  { pattern = "www.duevento.com.br/evento/*", zone_name = "duevento.com.br" }
+]
+
+# KV para cache (opcional - criar no painel da Cloudflare)
+# [[kv_namespaces]]
+# binding = "EVENTO_CACHE"
+# id = "seu-kv-id-aqui"
